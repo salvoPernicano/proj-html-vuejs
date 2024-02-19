@@ -1,11 +1,13 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
 import TopJumbo from './components/TopJumbo.vue'
+import AppSlider from './components/AppSlider.vue'
 
 export default{
     components : {
         AppHeader,
-        TopJumbo
+        TopJumbo,
+        AppSlider
     }
 }
 </script>
@@ -13,9 +15,8 @@ export default{
 <template>
 
         <AppHeader/>
-
-
         <TopJumbo />
+        <AppSlider/>
 
 </template>
 
