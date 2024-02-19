@@ -12,7 +12,7 @@
 
         </div>
         <div class="sliderPhotos">
-            <div :class="index === currentImage ? 'active' : '' " v-for="(item,index) in newMovieArray" class="cardMovie" @click="activateCard(index)">
+            <div :class="index === currentImage ? 'active' : 'inactive' " v-for="(item,index) in newMovieArray" class="cardMovie" @click="activateCard(index)">
                 <figure>
                     <img :src="item.posterPath" alt="poster">
                 </figure>
@@ -137,5 +137,9 @@ export default {
 
     .active{
         transform: scale(1.2);
+    }
+
+    .inactive{
+        filter: grayscale(100%);
     }
 </style>
