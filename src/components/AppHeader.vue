@@ -1,10 +1,12 @@
 <template>
     <div class="headerContainer">
         <div class="socialLogin container">
-            <div>
-                <span> <i class="fa-regular fa-envelope"></i> Superhit Top Movie <span>** King Star **</span></span>
+            <div class="socialSub">
+                <span> <i class="fa-regular fa-envelope"></i> Superhit Top Movie <span id="king">** King Star **</span></span>
                 <ul class="socialMenu">
-
+                    <li v-for="socialItem in socialArray">
+                 <img :src="socialItem.iconPath" alt="">
+                </li>
                 </ul>
             </div>
             <div>
@@ -74,6 +76,31 @@ export default {
                     subNames: 'Home'
                 }
 
+            ],
+            socialArray : [
+                
+            {
+                iconPath : './src/assets/img/social/facebook-f.svg',
+                testo : 'ciao'
+            },
+            {
+                iconPath : './src/assets/img/social/twitter.svg',
+                testo : 'ciao'
+            },
+            {
+                iconPath : './src/assets/img/social/linkedin-in.svg',
+                testo : 'ciao'
+            },
+            {
+                iconPath : './src/assets/img/social/instagram.svg',
+                testo : 'ciao'
+            },
+            {
+                iconPath : './src/assets/img/social/google-plus-g.svg',
+                testo : 'ciao'
+            },
+ 
+            
             ]
         }
     }
@@ -123,6 +150,10 @@ nav,
     height: 200px;
 }
 
+#king{
+    color: $appGreen;
+}
+
 input{
     background-color: $appBlack;
     padding: 10px 10px;
@@ -135,5 +166,21 @@ button{
     color: white;
     padding: 10px 20px;
     border: none;
+}
+
+.socialMenu{
+    display: flex;
+    list-style: none;
+    gap: 8px;
+    img{
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.socialSub{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 </style>
