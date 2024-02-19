@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <div class="headerContainer">
         <div class="socialLogin container">
             <div>
                 <span> <i class="fa-regular fa-envelope"></i> Superhit Top Movie <span>** King Star **</span></span>
@@ -30,13 +30,13 @@
                 <ul class="navMenu">
                     <li v-for="element in navArray"><a href="#">{{ element.name }}</a></li>
                 </ul>
+            </nav>
                 <span>
                     <i class="fa-solid fa-basket-shopping"></i>
                 </span>
-            </nav>
         </div>
 
-    </header>
+    </div>
 </template>
 
 <script>
@@ -85,23 +85,23 @@ export default {
 @use '../scss/partials/variables' as*;
 
 nav,
-.navMenu,
 .socialLogin,
 .logoSearch,
 .bottomNav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
     gap: 8px;
+    width: 100%;
 }
 
 .wrapper{
-    border-block: 1px solid grey;
+    border-block: 1px solid  $appLightBlue;
 }
 
-nav{
-    width: 100%;
+.navMenu{
+    display: flex;
+    gap: 10px;
 }
 
 .navMenu li{
@@ -113,4 +113,27 @@ nav{
 }
 
 
+.logoSearch{
+    padding-block: 1em;
+}
+.headerContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 200px;
+}
+
+input{
+    background-color: $appBlack;
+    padding: 10px 10px;
+    border-inline: none ;
+    border-block:1px solid $appLightBlue ;
+}
+
+button{
+    background-color: $appGreen;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+}
 </style>

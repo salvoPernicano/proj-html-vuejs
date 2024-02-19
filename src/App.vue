@@ -1,19 +1,31 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
+import TopJumbo from './components/TopJumbo.vue'
 
 export default{
     components : {
-        AppHeader
+        AppHeader,
+        TopJumbo
     }
 }
 </script>
 
 <template>
-    <AppHeader/>
+
+        <AppHeader/>
+
+
+        <TopJumbo />
+
 </template>
 
 <style lang="scss">
 @use './scss/style.scss' as *;
+
+
+
+
+
 
 
 </style>
