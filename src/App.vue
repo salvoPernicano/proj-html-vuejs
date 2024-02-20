@@ -5,6 +5,7 @@ import TopJumbo from './components/TopJumbo.vue'
 import BottomJumbo from './components/BottomJumbo.vue'
 import AppSlider from './components/AppSlider.vue'
 import AppPlaylist from './components/AppPlaylist.vue'
+import AppNewcome from './components/AppNewcome.vue'
 
 export default{
     components : {
@@ -12,7 +13,8 @@ export default{
         TopJumbo,
         AppSlider,
         AppPlaylist,
-        BottomJumbo
+        BottomJumbo,
+        AppNewcome
     },
     data(){
         return{
@@ -29,6 +31,7 @@ export default{
         <AppSlider/>
         <AppPlaylist/>
         <BottomJumbo/>
+        <AppNewcome/>
 
 </template>
 
