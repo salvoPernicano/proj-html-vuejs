@@ -6,6 +6,8 @@ import BottomJumbo from './components/BottomJumbo.vue'
 import AppSlider from './components/AppSlider.vue'
 import AppPlaylist from './components/AppPlaylist.vue'
 import AppNewcome from './components/AppNewcome.vue'
+import AppNews from './components/AppNews.vue'
+import AppSub from './components/AppSub.vue'
 
 export default{
     components : {
@@ -14,7 +16,9 @@ export default{
         AppSlider,
         AppPlaylist,
         BottomJumbo,
-        AppNewcome
+        AppNewcome,
+        AppNews,
+        AppSub
     },
     data(){
         return{
@@ -32,6 +36,9 @@ export default{
         <AppPlaylist/>
         <BottomJumbo/>
         <AppNewcome/>
+        <AppNews/>
+        <AppSub/>
+
 
 </template>
 

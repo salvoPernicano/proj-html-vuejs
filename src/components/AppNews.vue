@@ -1,0 +1,107 @@
+<template>
+    <div class="container">
+        <div class="newsSubBox">
+            <h1>Latest News</h1>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+
+        <div class="newsBox">
+            <div class="mainNews">
+                <figure>
+                    <img :src="store.newsArray[0].imagePath" alt="">
+                </figure>
+                <div  class="mainNewsInfo">
+                        <h2>{{store.newsArray[0].title }}</h2>
+
+                    </div>
+            </div>
+            <div class="smallNews">
+                <div v-for="(item,index) in store.newsArray" :key="index" v-show="index !== 0" class="newsCard">
+                    <figure>
+                        <img :src="item.imagePath" alt="">
+                    </figure>
+                    <div  class="newsInfo">
+                        <h2>{{ item.title }}</h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</template>
+
+<script>
+import { store } from '../store'
+
+export default {
+    name: 'AppNews',
+    data() {
+        return {
+            store,
+
+        }
+    }
+}
+</script>
+
+<style lang="scss" scoped>
+@use '../scss/style.scss' as *;
+@use '../scss/partials/variables' as*;
+.newsBox{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+.mainNews{
+    flex-basis: calc(50% - 15px);
+    height: 500px;
+    position: relative;
+    figure{
+        width: 100%;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .mainNewsInfo{
+        position: absolute;
+        bottom: 50px;
+        padding: 1em;
+    }
+}
+.smallNews{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-basis: 50%;
+    gap: 15px;
+    div{
+        height:calc(250px - (15px / 2));
+        flex-basis: calc(50% - 15px);
+        figure{
+            width: 100%;
+            height: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .newsCard{
+        position: relative;
+        .newsInfo{
+            padding: 1em ;
+            font-size: 0.8rem;
+            height: 50px;
+        position: absolute;
+        bottom: 25%;
+    }
+    }
+}
+
+
+</style>

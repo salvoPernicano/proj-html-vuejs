@@ -9,7 +9,7 @@
                 <li :class="item.active ? 'focused' : '' " v-for="item in newMovieArray">{{ item.name }}</li>
             </ul>
         </nav>
-        <div class="NewMoviesBox">
+        <div class="newMoviesBox">
             <NewMovies v-for="item in store.moviePlaylist" :propsNewMovies="item"/>
         </div>
 
@@ -64,9 +64,15 @@ export default {
 @use '../scss/partials/variables' as*;
 
 .upperWrapper {
-    height: 100vh;
+    margin-block: 1em;
 }
 
+.newMoviesBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .newComeBox {
     width: 80%;
     margin-block: 2em;
