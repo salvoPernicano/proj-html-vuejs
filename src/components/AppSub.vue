@@ -1,10 +1,12 @@
 <template>
     <div class="container">
 <form>
-  <input type="text" id="fname" name="fname">
-  <input type="text" id="lname" name="lname">
-  <input type="email" id="email" name="email">
-  <input type="submit" value="Subscribe">
+    <div class="inputGroup">
+        <input type="text" id="fname" name="fname" placeholder="First Name">
+        <input type="text" id="lname" name="lname" placeholder="Last Name">
+        <input type="email" id="email" name="email" placeholder="Email">
+    </div>
+  <button>Subscribe</button>
 </form> 
     </div>
 </template>
@@ -21,7 +23,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-div{
+@use '../scss/style.scss' as *;
+@use '../scss/partials/variables' as*;
+
+div.container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,6 +37,24 @@ div{
     background-size: cover;
     form{
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 50px;
+    } 
+    input{
+        margin-inline: 2em;
+        border: 1px solid white;
+        background-color: $appGreen;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    button{
+        border: none;
+        background-color: $appLightBlue;
+        padding: 20px 30px;
+        border-radius: 25px;
+        font-weight: bold;
+        color: white;
     }
 }
 </style>

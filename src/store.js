@@ -76,5 +76,30 @@ export const store = reactive({
           title : 'Pump Action Interaction English Action Movie (2020)',
           imagePath : './src/assets/img/blog5-570x570.jpg'
         },
-      ]
+      ],
+      socialIconArray : [
+                
+        {
+            iconPath : './src/assets/img/social/facebook-f.svg',
+            testo : 'ciao'
+        },
+        {
+            iconPath : './src/assets/img/social/twitter.svg',
+            testo : 'ciao'
+        },
+        {
+            iconPath : './src/assets/img/social/linkedin-in.svg',
+            testo : 'ciao'
+        },
+        {
+            iconPath : './src/assets/img/social/instagram.svg',
+            testo : 'ciao'
+        },
+        {
+            iconPath : './src/assets/img/social/google-plus-g.svg',
+            testo : 'ciao'
+        },
+
+        
+        ]
 })

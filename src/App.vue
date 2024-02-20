@@ -8,6 +8,7 @@ import AppPlaylist from './components/AppPlaylist.vue'
 import AppNewcome from './components/AppNewcome.vue'
 import AppNews from './components/AppNews.vue'
 import AppSub from './components/AppSub.vue'
+import AppFooter from './components/AppFooter.vue'
 
 export default{
     components : {
@@ -18,7 +19,8 @@ export default{
         BottomJumbo,
         AppNewcome,
         AppNews,
-        AppSub
+        AppSub,
+        AppFooter
     },
     data(){
         return{
@@ -38,6 +40,7 @@ export default{
         <AppNewcome/>
         <AppNews/>
         <AppSub/>
+        <AppFooter/>
 
 
 </template>
