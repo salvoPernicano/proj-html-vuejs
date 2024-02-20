@@ -1,13 +1,23 @@
 <script>
+import { store } from './store'
 import AppHeader from './components/AppHeader.vue'
 import TopJumbo from './components/TopJumbo.vue'
+import BottomJumbo from './components/BottomJumbo.vue'
 import AppSlider from './components/AppSlider.vue'
+import AppPlaylist from './components/AppPlaylist.vue'
 
 export default{
     components : {
         AppHeader,
         TopJumbo,
-        AppSlider
+        AppSlider,
+        AppPlaylist,
+        BottomJumbo
+    },
+    data(){
+        return{
+            store
+        }
     }
 }
 </script>
@@ -17,6 +27,8 @@ export default{
         <AppHeader/>
         <TopJumbo />
         <AppSlider/>
+        <AppPlaylist/>
+        <BottomJumbo/>
 
 </template>
 
