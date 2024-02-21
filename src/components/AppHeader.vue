@@ -1,5 +1,6 @@
 <template>
     <div class="headerContainer">
+        <a class="anchor" href="#logo"><i class="fa-solid fa-chevron-up" style="color: #000000;"></i></a>
         <div class="socialLogin container">
             <div class="socialSub">
                 <span> <i class="fa-regular fa-envelope"></i> Superhit Top Movie <span id="king">** King Star **</span></span>
@@ -16,7 +17,7 @@
         <div class="wrapper ">
             <div class="logoSearch container">
 
-                <figure>
+                <figure id="logo">
                     <img src="../assets/img/cropped-logo.png" alt="">
                 </figure>
                 <div class="search-container">
@@ -123,6 +124,16 @@ export default {
 <style lang="scss" scoped>
 @use '../scss/style.scss' as *;
 @use '../scss/partials/variables' as*;
+
+.anchor{
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    padding: 10px;
+    background-color: white;
+    font-size: 1.5rem;
+    z-index: 99;
+}
 
 nav,
 .socialLogin,
@@ -233,4 +244,6 @@ button{
     align-items: center;
     gap: 10px;
 }
+
+
 </style>

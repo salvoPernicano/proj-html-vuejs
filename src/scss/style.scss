@@ -6,11 +6,17 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: $appBlack;
     color: $appWhite;
     font-family: sans-serif;
 }
+
+
 
 .container{
     max-width: 1400px;

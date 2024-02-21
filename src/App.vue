@@ -10,8 +10,8 @@ import AppNews from './components/AppNews.vue'
 import AppSub from './components/AppSub.vue'
 import AppFooter from './components/AppFooter.vue'
 
-export default{
-    components : {
+export default {
+    components: {
         AppHeader,
         TopJumbo,
         AppSlider,
@@ -22,8 +22,8 @@ export default{
         AppSub,
         AppFooter
     },
-    data(){
-        return{
+    data() {
+        return {
             store
         }
     }
@@ -31,27 +31,23 @@ export default{
 </script>
 
 <template>
-
-        <AppHeader/>
+    <header>
+        <AppHeader />
+    </header>
+    <main>
         <TopJumbo />
-        <AppSlider/>
-        <AppPlaylist/>
-        <BottomJumbo/>
-        <AppNewcome/>
-        <AppNews/>
-        <AppSub/>
-        <AppFooter/>
-
-
+        <AppSlider />
+        <AppPlaylist />
+        <BottomJumbo />
+        <AppNewcome />
+        <AppNews />
+        <AppSub />
+    </main>
+    <footer>
+        <AppFooter />
+    </footer>
 </template>
 
 <style lang="scss">
 @use './scss/style.scss' as *;
-
-
-
-
-
-
-
 </style>

@@ -7,6 +7,7 @@
 
         <div class="newsBox">
             <div class="mainNews">
+            
                 <figure>
                     <img :src="store.newsArray[0].imagePath" alt="">
                 </figure>
@@ -52,6 +53,10 @@ export default {
 <style lang="scss" scoped>
 @use '../scss/style.scss' as *;
 @use '../scss/partials/variables' as*;
+
+img{
+    object-fit: cover;
+}
 .newsBox{
     display: flex;
     flex-wrap: wrap;
@@ -166,5 +171,19 @@ export default {
 
 .faded{
     opacity: 0.5;
+}
+
+.mainNews:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  top: 0;
+  transition: height 0.5s ease-out;
+  background: linear-gradient(to top, transparent 0%,  $appGreen 150%);
+}
+.mainNews:hover:before {
+  height: 100%;
 }
 </style>
