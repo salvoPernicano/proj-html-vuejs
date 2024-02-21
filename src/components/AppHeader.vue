@@ -30,8 +30,8 @@
         <div class="bottomNav container">
             <nav>
                 <ul class="navMenu">
-                    <li class="navTitle" v-for="(element) in navArray"><a  href="#">{{ element.name }} <span v-show="element.subNames"><i class="fa-solid fa-chevron-down"></i></span> </a>
-                    <ul class="dropdownMenu">
+                    <li class="navTitle" v-for="(element) in navArray"><a  href="#">{{ element.name }} <span v-if="element.subNames"><i class="fa-solid fa-chevron-down"></i></span> </a>
+                    <ul  v-if="element.subNames" class="dropdownMenu">
                         <li v-for="item in element.subNames">{{ item }}</li>
                     </ul></li>
                 </ul>

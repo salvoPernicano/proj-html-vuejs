@@ -39,7 +39,7 @@ export const store = reactive({
           "PosterPath":  './src/assets/img/4.jpg',
         },
         {
-          "titolo": "Psycho",
+          "titolo": "Sinister",
           "data_di_uscita": "16 settembre 1960",
           "views": 280,
           "durata": 109,
@@ -47,7 +47,7 @@ export const store = reactive({
           "PosterPath":  './src/assets/img/3 (1).jpg',
         },
         {
-          "titolo": "Psycho",
+          "titolo": "Non aprite quella porta",
           "data_di_uscita": "16 settembre 1960",
           "views": 280,
           "durata": 109,
@@ -87,23 +87,23 @@ export const store = reactive({
                 
         {
             iconPath : './src/assets/img/social/facebook-f.svg',
-            testo : 'ciao'
+            
         },
         {
             iconPath : './src/assets/img/social/twitter.svg',
-            testo : 'ciao'
+         
         },
         {
             iconPath : './src/assets/img/social/linkedin-in.svg',
-            testo : 'ciao'
+           
         },
         {
             iconPath : './src/assets/img/social/instagram.svg',
-            testo : 'ciao'
+           
         },
         {
             iconPath : './src/assets/img/social/google-plus-g.svg',
-            testo : 'ciao'
+          
         },
 
         
