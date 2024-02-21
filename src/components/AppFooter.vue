@@ -28,7 +28,16 @@
                         </div>
                 </div>
             </div>
-   
+        </div>
+        <div class="copy container">
+            <div>
+                <span>Terms and Conditions</span>
+                <span>Policy</span>
+                <span>About</span>
+            </div>
+            <div>
+                <span>&copy; 2020 <span class="green">@Themepul</span> All Rights Reserved</span>
+            </div>
         </div>
     </div>
 </template>
@@ -106,6 +115,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use '../scss/style.scss' as *;
+@use '../scss/partials/variables' as*;
 div.ft::before {
 
     content: "";
@@ -148,7 +159,17 @@ ul{
 .title{
     font-weight: bold;
     font-size: 1.2rem;
+    position: relative;
 }
+.title:after{
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+        content: "";
+        background-color: white;
+        height: 2px;
+        width: 20%;
+    }
 
 .recent{
     padding-block: 3em;
@@ -172,5 +193,18 @@ ul{
 
 .postInfo h4{
     font-weight: 200;
+}
+
+.copy{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    div{
+        display: flex;
+        gap: 10px;
+    }
+    .green{
+        color: $appGreen;
+    }
 }
 </style>
