@@ -30,7 +30,10 @@
         <div class="bottomNav container">
             <nav>
                 <ul class="navMenu">
-                    <li v-for="element in navArray"><a href="#">{{ element.name }}</a></li>
+                    <li class="navTitle" v-for="(element) in navArray"><a  href="#">{{ element.name }} <span v-show="element.subNames"><i class="fa-solid fa-chevron-down"></i></span> </a>
+                    <ul class="dropdownMenu">
+                        <li v-for="item in element.subNames">{{ item }}</li>
+                    </ul></li>
                 </ul>
             </nav>
                 <span>
@@ -49,31 +52,41 @@ export default {
             navArray: [
                 {
                     name: 'Home',
-                    subNames: 'Home'
+                    subNames:[
+                      'Home', 'Home 2' , 'Home 3','Home 4','Home 5','Home 6'
+                    ] 
                 },
                 {
                     name: 'Celebritiy',
-                    subNames: 'Movie'
+                    subNames:[
+                      'Celebritiy', 'Celebritiy'  
+                    ] 
                 },
                 {
                     name: 'Movie',
-                    subNames: 'Home'
+                    subNames:[
+                      'Movie', 'Movie'  
+                    ] 
                 },
                 {
                     name: 'Page',
-                    subNames: 'Home'
+                    subNames:[
+                      'Page', 'Page'  
+                    ] 
                 },
                 {
                     name: 'Shop',
-                    subNames: 'Home'
+                    subNames:[
+                      'Page', 'Page'  
+                    ] 
                 },
                 {
                     name: 'Blog',
-                    subNames: 'Home'
+        
                 },
                 {
                     name: 'Contact Us',
-                    subNames: 'Home'
+             
                 }
 
             ],
@@ -131,6 +144,23 @@ nav,
     gap: 10px;
 }
 
+.dropdownMenu{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 150%;
+    background-color: $appBlack;
+}
+
+.navTitle{
+    position: relative;
+}
+.navTitle:hover .dropdownMenu{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 .fa-basket-shopping{
     position: relative;
 }
@@ -147,6 +177,7 @@ nav,
 
 .navMenu li{
     list-style: none;
+    cursor: pointer;
     a{
         text-decoration: none;
         color: $appWhite;
