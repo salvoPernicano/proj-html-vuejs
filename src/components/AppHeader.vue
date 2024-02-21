@@ -131,6 +131,20 @@ nav,
     gap: 10px;
 }
 
+.fa-basket-shopping{
+    position: relative;
+}
+.fa-basket-shopping::after{
+    content: '0';
+    font-size: 0.7rem;
+    padding:3px 5px;
+    border-radius: 50%;
+    top: -10px;
+    color: white;
+    background-color: $appGreen;
+    position: absolute;
+}
+
 .navMenu li{
     list-style: none;
     a{

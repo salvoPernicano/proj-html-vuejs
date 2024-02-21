@@ -9,18 +9,20 @@
         </div>
         <div class="framePlaylist">
             <iframe width="956" height="500" src="https://www.youtube.com/embed/H-izTnvz9MI?si=jOO6tLK3DJGyt2xK"
-                title="YouTube video player" frameborder="1"
+                title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
             <div class="playlist">
                 <div class="header">
-            <h1>New Movie</h1>
-        </div>
-                <MoviePlaylist v-for="(element, index) in store.moviePlaylist" :key="titolo" :propsObject="element" />
-
+                    <h1>New Movie</h1>
+                    <span>Now Plying 24</span>
+                </div>
+                <div class="playListSubBox">
+                    <MoviePlaylist v-for="(element, index) in store.moviePlaylist" :key="titolo" :propsObject="element" />
+                </div>
+            </div>
             </div>
         </div>
-    </div>
 </template>
 
 <script>
@@ -49,6 +51,7 @@ export default {
     flex-direction: column;
     justify-content: space-around;
 }
+
 .PlaylistTop {
     width: 100%;
     padding-left: 2em;
@@ -66,14 +69,20 @@ export default {
     padding-block: 4em;
     display: flex;
     justify-content: space-between;
-    .playlist{
-        border: 1px solid red;
+
+    .playlist {
         height: 500px;
         flex-basis: 30%;
-        overflow: auto;
         padding: 1em;
         background-color: $appLightBlue;
     }
 }
 
+.header{
+    height: 50px;
+}
+.playListSubBox{
+    height: calc(100% - 50px);
+    overflow: auto;
+}
 </style>

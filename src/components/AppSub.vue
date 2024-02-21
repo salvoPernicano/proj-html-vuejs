@@ -55,6 +55,11 @@ div.container{
         border-radius: 25px;
         font-weight: bold;
         color: white;
+        &:hover{
+            color: $appBlack;
+            background-color: white;
+            cursor: pointer;
+        }
     }
 }
 </style>

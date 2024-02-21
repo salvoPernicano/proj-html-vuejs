@@ -48,7 +48,10 @@ export default {
             font-size: 0.8rem;
         }
     }
-
+    &:hover{
+        background-color: $appBlack;
+        cursor: pointer;
+    }
 }
 .date{
     display: flex;
