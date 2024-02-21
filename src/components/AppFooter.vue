@@ -157,6 +157,7 @@ ul{
 }
 
 .title{
+    margin-bottom: 10px;
     font-weight: bold;
     font-size: 1.2rem;
     position: relative;
