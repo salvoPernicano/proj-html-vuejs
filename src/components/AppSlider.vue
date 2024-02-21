@@ -19,6 +19,8 @@
                 <div class="movieInfo">
                     <h2>{{ item.title }}</h2>
                     <h3>{{ 'Category :'+item.category }}</h3>
+                    <span class="pillDarkLeft">Details</span>
+                    <span class="pillDarkRight">{{ item.views + 'views'}}</span>
                 </div>
             </div>
         </div>
@@ -114,12 +116,36 @@ export default {
         position: absolute;
         bottom: 3em;
         padding: 1em;
+        h3{
+            font-size: 0.9rem;
+            margin-block: 5px;
+        }
+    }
 
+    .pillDarkLeft{
+        margin-top: 5px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        font-weight: bold;
+        background-color: $appBlack;
+        padding: 10px;
+        position: absolute;
+        left: 0;
+    }
+    .pillDarkRight{
+        margin-top: 5px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        font-weight: bold;
+        background-color: $appBlack;
+        padding: 10px;
+        position: absolute;
+        right: 0;
     }
     .sliderPhotos{
         height: 50vh;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         padding-bottom: 5em;
         figure{
