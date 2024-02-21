@@ -2,21 +2,32 @@
     <div class="ft">
         <div class="container">
             <ul>
-                <li>{{ navMenuOptions[0].name }}</li>
+                <li class="title">{{ navMenuOptions[0].name }}</li>
                 <li>{{ navMenuOptions[0].content }}</li>
+                <ul class="footerIconBox">
+                    <li class="footerIcon" v-for="icon in navMenuOptions[0].icons"><img :src=icon alt=""></li>
+
+                </ul>
             </ul>
             <ul>
-                <li>{{ navMenuOptions[1].name }}</li>
+                <li class="title">{{ navMenuOptions[1].name }}</li>
                 <li v-for="element in navMenuOptions[1].content">{{ element }}</li>
             </ul>
             <ul>
-                <li>{{ navMenuOptions[2].name }}</li>
+                <li class="title">{{ navMenuOptions[2].name }}</li>
                 <li v-for="element in navMenuOptions[2].content">{{ element }}</li>
             </ul>
-            <ul>
-                <li>{{ navMenuOptions[3].name }}</li>
-                <li v-for="element in navMenuOptions[3].content"><img :src=element.imagePath alt=""></li>
-            </ul>
+            <div class="recent">
+                <h3 class="title">{{ navMenuOptions[3].name }}</h3>
+                    <div class="recentBox" v-for="element in navMenuOptions[3].content">
+                        <img :src=element.imagePath alt="">
+                        <div class="postInfo">
+                        <h4>{{ element.title }}</h4>
+                        <h4>{{ element.date }}</h4>
+
+                        </div>
+                </div>
+            </div>
    
         </div>
     </div>
@@ -32,7 +43,14 @@ export default {
             navMenuOptions: [
                 {
                     name: 'About Us',
-                    content: 'Mauris malesuada arcu eu posuere eleifen. Ut egestas tortor at leo egestas tincidunt. Nam tincidunt metus tristique: tristique viverra. Mauris erat ante, egestas vitae dapibus seds.'
+                    content: 'Mauris malesuada arcu eu posuere eleifen. Ut egestas tortor at leo egestas tincidunt. Nam tincidunt metus tristique: tristique viverra. Mauris erat ante, egestas vitae dapibus seds.',
+                    icons : [
+                    './src/assets/img/social/facebook-f.svg',
+                    './src/assets/img/social/twitter (1).svg',
+                    './src/assets/img/social/linkedin-in.svg',
+                    './src/assets/img/social/instagram.svg',
+                    './src/assets/img/social/pinterest-p.svg'
+                    ]
                 },
                 {
                     name: 'Movie Category',
@@ -112,25 +130,47 @@ div.ft {
 }
 
 .container {
-    border: 1px solid red;
     height: 100%;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 
 ul{
-    padding: 1em;
+    padding-block: 3em;
     flex-basis: 25%;
     list-style: none;
     display: flex;
     flex-direction: column;
-    li{
-        margin-block: 6px;
-    }
+    gap: 20px;
 }
 
-ul li:first-child{
+.title{
     font-weight: bold;
     font-size: 1.2rem;
+}
+
+.recent{
+    padding-block: 3em;
+}
+.recentBox{
+    padding-top: 5px;
+        display: flex;
+        gap: 12px;
+}
+.footerIconBox{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footerIcon{
+    height: 16px;
+    width: 16px;
+}
+
+.postInfo h4{
+    font-weight: 200;
 }
 </style>
