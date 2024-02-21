@@ -14,6 +14,8 @@
                         <h2>{{store.newsArray[0].title }}</h2>
 
                     </div>
+                    <span class="pillDarkLeft">Details</span>
+                    <span class="share"><span class="faded">moviestar</span> 0 Comments Share</span>
             </div>
             <div class="smallNews">
                 <div v-for="(item,index) in store.newsArray" :key="index" v-show="index !== 0" class="newsCard">
@@ -22,8 +24,9 @@
                     </figure>
                     <div  class="newsInfo">
                         <h2>{{ item.title }}</h2>
-
                     </div>
+                    <span class="pillDarkLeft">Details</span>
+                    <span class="share">Share</span>
                 </div>
             </div>
         </div>
@@ -103,5 +106,26 @@ export default {
     }
 }
 
+.pillDarkLeft{
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+        background-color: $appBlack;
+        padding: 5px 15px;
+        font-weight: bold;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
 
+.share{
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.faded{
+    opacity: 0.5;
+}
 </style>
