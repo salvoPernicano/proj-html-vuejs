@@ -84,7 +84,7 @@ export default {
                 testo : 'ciao'
             },
             {
-                iconPath : './src/assets/img/social/twitter.svg',
+                iconPath : './src/assets/img/social/twitter (1).svg',
                 testo : 'ciao'
             },
             {
