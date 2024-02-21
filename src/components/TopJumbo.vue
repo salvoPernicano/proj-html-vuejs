@@ -58,6 +58,11 @@ button{
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
+    cursor: pointer;
+    &:hover{
+        background-color: white;
+        color: $appBlack;
+    }
 }
 
 
