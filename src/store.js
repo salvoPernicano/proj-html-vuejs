@@ -8,7 +8,7 @@ export const store = reactive({
         {
           "titolo": "L'Esorcista",
           "data_di_uscita": "26 dicembre 1973",
-          "views": 45000000,
+          "views": 450,
           "durata": 122,
           "category" : 'Top Rating',
           "PosterPath":  './src/assets/img/1.jpg',
@@ -16,7 +16,7 @@ export const store = reactive({
         {
           "titolo": "Shining",
           "data_di_uscita": "23 maggio 1980",
-          "views": 38000000,
+          "views": 380,
           "durata": 144,
           "category" : 'Latest Movie',
           "PosterPath":  './src/assets/img/2.jpg',
@@ -24,7 +24,7 @@ export const store = reactive({
         {
           "titolo": "Il sesto senso",
           "data_di_uscita": "2 agosto 1999",
-          "views": 32000000,
+          "views": 320,
           "durata": 107,
           "category" : 'Coming Soon',
           "PosterPath":  './src/assets/img/3.jpg',
@@ -32,7 +32,7 @@ export const store = reactive({
         {
           "titolo": "Psycho",
           "data_di_uscita": "16 settembre 1960",
-          "views": 28000000,
+          "views": 280,
           "durata": 109,
           "category" : 'TV Series',
           "PosterPath":  './src/assets/img/4.jpg',
@@ -40,7 +40,7 @@ export const store = reactive({
         {
           "titolo": "Psycho",
           "data_di_uscita": "16 settembre 1960",
-          "views": 28000000,
+          "views": 280,
           "durata": 109,
           "category" : 'Top Rating',
           "PosterPath":  './src/assets/img/5.jpg',
@@ -48,7 +48,7 @@ export const store = reactive({
         {
           "titolo": "Psycho",
           "data_di_uscita": "16 settembre 1960",
-          "views": 28000000,
+          "views": 280,
           "durata": 109,
           "category" : 'Latest Movie',
           "PosterPath":  './src/assets/img/6.jpg',
