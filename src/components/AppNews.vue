@@ -19,6 +19,7 @@
             </div>
             <div class="smallNews">
                 <div v-for="(item,index) in store.newsArray" :key="index" v-show="index !== 0" class="newsCard">
+                    <span class="date">{{ item.date }}</span>
                     <figure>
                         <img :src="item.imagePath" alt="">
                     </figure>
@@ -88,9 +89,11 @@ export default {
     align-items: center;
     flex-basis: 50%;
     gap: 15px;
+
     div{
         height:calc(250px - (15px / 2));
         flex-basis: calc(50% - 15px);
+        position: relative;
         figure{
             width: 100%;
             height: 100%;
@@ -100,6 +103,20 @@ export default {
             }
         }
     }
+
+    .newsCard:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  top: 0;
+  transition: height 0.5s ease-out;
+  background: linear-gradient(to top, transparent 0%,  $appGreen 150%);
+}
+.newsCard:hover:before {
+  height: 100%;
+}
 
     .newsCard{
         position: relative;
@@ -113,6 +130,21 @@ export default {
     }
 }
 
+.newsCard:hover .date{
+    display: block;
+}
+.date{
+
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    padding: 10px 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: $appGreen;
+
+}
 .pillDarkLeft{
         position: absolute;
         left: 0;

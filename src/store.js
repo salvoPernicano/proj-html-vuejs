@@ -12,6 +12,7 @@ export const store = reactive({
           "durata": 122,
           "category" : 'Top Rating',
           "PosterPath":  './src/assets/img/1.jpg',
+          "Genres" : 'Drama, Action Release'
         },
         {
           "titolo": "Shining",
@@ -19,7 +20,7 @@ export const store = reactive({
           "views": 380,
           "durata": 144,
           "category" : 'Latest Movie',
-          "PosterPath":  './src/assets/img/2.jpg',
+          "PosterPath":  './src/assets/img/5-1.jpg',
         },
         {
           "titolo": "Il sesto senso",
@@ -43,7 +44,7 @@ export const store = reactive({
           "views": 280,
           "durata": 109,
           "category" : 'Top Rating',
-          "PosterPath":  './src/assets/img/5.jpg',
+          "PosterPath":  './src/assets/img/3 (1).jpg',
         },
         {
           "titolo": "Psycho",
@@ -51,30 +52,35 @@ export const store = reactive({
           "views": 280,
           "durata": 109,
           "category" : 'Latest Movie',
-          "PosterPath":  './src/assets/img/6.jpg',
+          "PosterPath":  './src/assets/img/2.jpg',
         },
       
       ],
       newsArray : [
         {
           title : 'Actor The Concept Movie High Concept Theory See The Post',
-          imagePath : './src/assets/img/blog.jpg'
+          imagePath : './src/assets/img/blog.jpg',
+          date : 'April 14, 2020'
         },
         {
           title : 'Consequat Nam Lectus Nibh Aucibus It Has Turpis',
-          imagePath : './src/assets/img/blog2.jpg'
+          imagePath : './src/assets/img/blog2.jpg',
+          date : 'April 14, 2020'
         },
         {
           title : 'Nam Lectus Nibh Consequat     Aucibus Turpis it Has',
-          imagePath : './src/assets/img/blog3.jpg'
+          imagePath : './src/assets/img/blog3.jpg',
+          date : 'April 14, 2020'
         },
         {
           title : 'Bring Me The Head Of Alfredo Garcia Best Movie In',
-          imagePath : './src/assets/img/blog4-570x570.jpg'
+          imagePath : './src/assets/img/blog4-570x570.jpg',
+          date : 'April 14, 2020'
         },
         {
           title : 'Pump Action Interaction English Action Movie (2020)',
-          imagePath : './src/assets/img/blog5-570x570.jpg'
+          imagePath : './src/assets/img/blog5-570x570.jpg',
+          date : 'April 14, 2020'
         },
       ],
       socialIconArray : [
