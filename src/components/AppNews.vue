@@ -57,6 +57,13 @@ export default {
     align-items: center;
     gap: 15px;
 }
+
+.newsSubBox{
+    margin-block: 2em;
+    padding: 1em 2em;
+    border-left: 1px solid $appGreen;
+    border-bottom : 1px solid $appLightBlue
+}
 .mainNews{
     flex-basis: calc(50% - 15px);
     height: 500px;
